@@ -16,11 +16,11 @@ import { SelectedChannelStore } from "@webpack/common";
 const CloudUpload: typeof TCloudUpload = findLazy(m => m.prototype?.trackUploadFinished);
 
 const generateImage = async (text: string): Promise<string> => {
-    // Discord chat-like constants
-    const MAX_WIDTH = 500; // Typical chat message width before wrapping
+    
+    const MAX_WIDTH = 500; 
     const FONT_SIZE = 16;
-    const LINE_HEIGHT = 1.375; // Discord's line-height for chat
-    const PADDING = 2; // Minimal padding for the canvas edges
+    const LINE_HEIGHT = 1.375; 
+    const PADDING = 2; 
     const FONT_STACK = '"gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif';
 
     const canvas = document.createElement("canvas");
@@ -51,7 +51,7 @@ const generateImage = async (text: string): Promise<string> => {
     const lines = wrapText(text, MAX_WIDTH);
     const lineHeightPx = FONT_SIZE * LINE_HEIGHT;
 
-    // Calculate actual dimensions needed
+    
     let maxLineWidth = 0;
     for (const line of lines) {
         const width = ctx.measureText(line).width;
@@ -61,7 +61,7 @@ const generateImage = async (text: string): Promise<string> => {
     canvas.width = maxLineWidth + (PADDING * 2);
     canvas.height = (lines.length * lineHeightPx) + (PADDING * 2);
 
-    // Re-set font after resizing canvas
+    
     ctx.font = `${FONT_SIZE}px ${FONT_STACK}`;
     ctx.fillStyle = "#ffffff";
     ctx.textBaseline = "top";
