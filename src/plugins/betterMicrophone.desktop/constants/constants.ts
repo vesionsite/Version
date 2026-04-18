@@ -25,7 +25,13 @@ export const PluginInfo = {
     DESCRIPTION: "This plugin allows you to further customize your microphone.",
     AUTHOR: {
         ...Devs["3TB"],
-        github: "https://github.com/3tb3301"
+        github: "https://github.com/3Tb3301"
     },
-    CONTRIBUTORS: {}
+    CONTRIBUTORS: {
+        philhk: {
+            github: "https://github.com/philhk",
+            id: 305288513941667851n,
+            name: "philhk"
+        }
+    },
 } as const satisfies types.PluginInfo;

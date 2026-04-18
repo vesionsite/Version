@@ -23,12 +23,6 @@ import { types } from "../../philsPluginLibrary";
 export const PluginInfo = {
     PLUGIN_NAME: "BetterScreenshare",
     DESCRIPTION: "This plugin allows you to further customize your screen sharing.",
-    AUTHOR: {
-        ...Devs["3TB"],
-        github: "https://github.com/3tb3301"
-    },
-    CONTRIBUTORS: {
-        
-     },
-    README: "https://github.com/viciouscal/Vencord/tree/main/src/plugins/betterScreenshare.desktop"
+    authors: [Devs["3Tb"]],
+    README: "https://github.com/3tb3301/Vesion/tree/main/src/plugins/betterScreenshare.desktop"
 } as const satisfies types.PluginInfo;
