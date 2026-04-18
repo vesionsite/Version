@@ -29,10 +29,8 @@ export interface SettingsPanelButtonProps extends Partial<React.ComponentProps<t
 export const SettingsPanelButton = (props: SettingsPanelButtonProps) => {
     return (
         <Button
-            size={Button.Sizes.MIN}
-            look={Button.Looks.BLANK}
+            size="small"
             className={classes(panelClasses.button, panelClasses.buttonColor)}
-            style={{ borderRadius: "50%", padding: 0, width: 32, height: 32, display: "flex", justifyContent: "center", alignItems: "center" }}
             {...props}
         >
             {props.icon && <props.icon className={classes(panelClasses.buttonIcon)} />}
