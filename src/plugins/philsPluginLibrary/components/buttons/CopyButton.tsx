@@ -24,7 +24,7 @@ import { IconTooltipButton } from ".";
 export const CopyButton = (props: React.ComponentProps<typeof Button>) => {
     return (
         <IconTooltipButton
-            color={Button.Colors.SECONDARY}
+            color={Button.Colors.PRIMARY}
             tooltipText="Copy Profile"
             icon={
                 <svg width="18" height="18" viewBox="0 0 24 24">
