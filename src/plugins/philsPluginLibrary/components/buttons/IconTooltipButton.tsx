@@ -30,11 +30,24 @@ export const IconTooltipButton = (props: React.ComponentProps<typeof Button> & I
     return (
         <Tooltip text={props.tooltipText}>
             {tooltipProps => <Button
-                size={Button.Sizes.MIN}
+                look={Button.Looks.FILLED}
+                size={Button.Sizes.NONE}
                 {...props as any}
-                style={{ aspectRatio: 1, maxHeight: "32px", boxSizing: "border-box", ...props.style }}
+                style={{ 
+                    width: "32px", 
+                    height: "32px", 
+                    minWidth: "32px", 
+                    minHeight: "32px", 
+                    padding: 0, 
+                    display: "flex", 
+                    alignItems: "center", 
+                    justifyContent: "center",
+                    borderRadius: "4px",
+                    boxSizing: "border-box",
+                    ...props.style 
+                }}
             >
-                <Flex style={{ justifyContent: "center", alignItems: "center", width: 24, height: 24 }}>
+                <Flex style={{ justifyContent: "center", alignItems: "center", width: "100%", height: "100%" }}>
                     {props.icon}
                 </Flex>
                 <span {...tooltipProps} style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0 }} />

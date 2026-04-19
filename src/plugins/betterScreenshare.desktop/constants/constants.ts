@@ -16,22 +16,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { Button } from "@webpack/common";
-import React from "react";
+import { Devs } from "@utils/constants";
 
-import { IconTooltipButton } from ".";
+import { types } from "../../philsPluginLibrary";
 
-export const NewButton = (props: React.ComponentProps<typeof Button>) => {
-    return (
-        <IconTooltipButton
-            color={Button.Colors.SECONDARY}
-            tooltipText="New Profile"
-            icon={
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-            }
-            {...props} />
-    );
-};
+export const PluginInfo = {
+    PLUGIN_NAME: "BetterScreenshare",
+    DESCRIPTION: "This plugin allows you to further customize your screen sharing.",
+    authors: [Devs["3Tb"]],
+    README: "https://github.com/3tb3301/Vesion/tree/main/src/plugins/betterScreenshare.desktop"
+} as const satisfies types.PluginInfo;

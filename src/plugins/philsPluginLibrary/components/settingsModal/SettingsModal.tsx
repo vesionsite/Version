@@ -39,7 +39,7 @@ export const SettingsModal = (props: SettingsModalProps) => {
     const doneButton =
         <Button
             size="small"
-            variant="primary"
+            variant="secondary"
             onClick={props.onDone}
         >
             {props.closeButtonName ?? "Done"}
@@ -59,8 +59,7 @@ export const SettingsModal = (props: SettingsModalProps) => {
             <ModalFooter>
                 <Flex style={{ width: "100%" }}>
                     <div style={{ flex: 1, display: "flex" }}>
-                        {(props.author || props.contributors && props.contributors.length > 0) &&
-
+                        {(props.author || (props.contributors && props.contributors.length > 0)) &&
                             <Flex style={{ justifyContent: "flex-start", alignItems: "center", flex: 1 }}>
                                 <ContributorAuthorSummary
                                     author={props.author}
