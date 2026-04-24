@@ -16,9 +16,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import * as types from "@plugins/philsPluginLibrary/types";
-import { waitForStore } from "@webpack/common/internal";
+import { types } from "@plugins/philsPluginLibrary";
+import { Devs } from "@utils/constants";
 
-export let MediaEngineStore: types.MediaEngineStore;
-
-waitForStore("MediaEngineStore", store => MediaEngineStore = store);
+export const PluginInfo = {
+    PLUGIN_NAME: "BetterScreenshare",
+    DESCRIPTION: "This plugin allows you to further customize your screen sharing.",
+    authors: [Devs["3Tb"]],
+    README: "https://github.com/3tb3301/Vesion/tree/main/src/plugins/betterScreenshare.desktop"
+} as const satisfies types.PluginInfo;

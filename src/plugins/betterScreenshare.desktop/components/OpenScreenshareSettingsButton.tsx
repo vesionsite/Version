@@ -16,9 +16,22 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import * as types from "@plugins/philsPluginLibrary/types";
-import { waitForStore } from "@webpack/common/internal";
+import { openScreenshareModal } from "@plugins/betterScreenshare.desktop/modals";
+import { Button } from "@webpack/common";
+import React from "react";
 
-export let MediaEngineStore: types.MediaEngineStore;
+export interface OpenScreenshareSettingsButtonProps {
+    title?: string;
+}
 
-waitForStore("MediaEngineStore", store => MediaEngineStore = store);
+export const OpenScreenshareSettingsButton = (props: OpenScreenshareSettingsButtonProps) => {
+    return (
+        <Button
+            size={Button.Sizes.SMALL}
+            color={Button.Colors.PRIMARY}
+            onClick={openScreenshareModal}
+        >
+            {props.title ? props.title : "Screenshare Settings"}
+        </Button>
+    );
+};

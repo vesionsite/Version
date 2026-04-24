@@ -16,9 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import * as types from "@plugins/philsPluginLibrary/types";
-import { waitForStore } from "@webpack/common/internal";
+import { PluginInfo } from "@plugins/betterMicrophone.desktop/constants";
+import { Logger } from "@utils/Logger";
 
-export let MediaEngineStore: types.MediaEngineStore;
-
-waitForStore("MediaEngineStore", store => MediaEngineStore = store);
+export const logger = new Logger(PluginInfo.PLUGIN_NAME);

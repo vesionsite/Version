@@ -16,9 +16,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import * as types from "@plugins/philsPluginLibrary/types";
-import { waitForStore } from "@webpack/common/internal";
+import { types } from "@plugins/philsPluginLibrary";
+import { Devs } from "@utils/constants";
 
-export let MediaEngineStore: types.MediaEngineStore;
-
-waitForStore("MediaEngineStore", store => MediaEngineStore = store);
+export const PluginInfo = {
+    PLUGIN_NAME: "BetterMicrophone",
+    DESCRIPTION: "This plugin allows you to further customize your microphone.",
+    AUTHOR: {
+        ...Devs["3TB"],
+        github: "https://github.com/3Tb3301"
+    },
+    CONTRIBUTORS: {},
+} as const satisfies types.PluginInfo;
